@@ -1,0 +1,101 @@
+*{
+    font-family: Inter,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue,Arial,sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+
+}
+body > button{
+    border: 0px;
+    color: #fdfdfd;
+    background-color: #FFA100;
+    padding: 8px 16px;
+    border-radius: 26px;
+    font-weight: 700;
+    cursor: pointer;
+    position: absolute;
+    right: 29px;
+    top: 34px;
+}
+body > button:hover{
+    background-color: #e69202;
+}
+body > header{
+    display: flex;
+    align-items: center;
+    background-color: #2daac3;
+    height: 104px;
+    padding: 0px 22px;
+}
+body > header > img{
+    height: 80px;
+    filter: brightness(0.5);
+}
+body > header > div{
+    display: flex;
+    flex-direction: column;
+}
+body > header > div > h1{
+    color: white;
+}
+body > header > div > h2{
+    font-size: 14px;
+    color: #165460;
+}
+questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+}
+question{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    width: 90%;
+    border: 0px solid gainsboro;
+    border-radius: 9px;
+    margin-bottom: 15px;
+}
+
+question > data{
+    color: #555;
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+question > description{
+    color: #555;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 9px 0px 9px 0px;
+}
+question alt{
+    display: flex;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid rgba(140,181,212,.29);
+    margin: 3px;
+    position: relative;
+}
+question alt::before {
+    position: absolute;
+    top: 46%;
+    left: -18px;
+    content: attr(name);
+    transform: translateY(-50%);
+    color: gray;
+    font-weight: 500;
+}
+question alternatives{
+    padding-left: 20px;
+}
+question alt p{
+    font-weight: 400;
+    color: #555;
+    font-size: 14px;
+}

@@ -1,0 +1,41 @@
+html,
+body {
+  background-color: white;
+  height: 210px;
+  width: 200px;
+}
+
+
+#container{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#container > img{
+  height: 114px;
+  width: 114px;
+}
+#container > h1{
+  font-size: 18px;
+  margin: 0;
+  padding: 6px;
+}
+#container > button{
+  border: 0px;
+    color: #fdfdfd;
+    background-color: #FFA100;
+    padding: 8px 16px;
+    border-radius: 26px;
+    font-weight: 700;
+    cursor: pointer;
+}
+#container > button:hover{
+  background-color: #d88900;
+}
