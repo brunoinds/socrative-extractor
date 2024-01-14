@@ -9,7 +9,6 @@ chrome.extension.onRequest.addListener(function(message,sender,sendResponse){
         console.log(message.payload)
         getQuizData(message.payload, (data) => {
             openDocument(data);
-            //downloadFile('Socrative Quiz.json', JSON.stringify(data, null, 4))
         })
     }
 });
@@ -42,6 +41,10 @@ function downloadFile(filename, text) {
 function openDocument(documentData){
     render();
     function render(){
+        if (documentData === undefined){
+            alert('The room has no activity yet. Please wait for the teacher to start the quiz.');
+        }
+
         chrome.runtime.getPackageDirectoryEntry(function(root) {
             root.getFile("model.html", {}, function(fileEntry) {
                 fileEntry.file(function(file) {
@@ -60,9 +63,7 @@ function openDocument(documentData){
 
 
         function load(htmlText){
-            console.log('There')
             htmlText = htmlText.replace('#socrativeDataInsertion', JSON.stringify(documentData))
-            console.log(htmlText)
             const previewDocument = open('url');
             previewDocument.document.write(htmlText);
 
